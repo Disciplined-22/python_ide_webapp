@@ -2,7 +2,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import dataRoutes from "./routes/dataRoutes";
+import cals_file from "./routes/cals_file";
 
 dotenv.config();
 
@@ -17,9 +17,9 @@ app.get("/", (req, res) => {
 });
 
 console.log("Registering routes...");
-app.use("/api/data", dataRoutes);
+app.use("/api/cals_file", cals_file);
 
-const PORT = process.env.PORT || 300;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Express API running on http://localhost:${PORT}`);
 });
