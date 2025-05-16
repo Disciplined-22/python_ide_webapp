@@ -4,6 +4,6 @@ import { sendToFastAPI } from "../controllers/dataController";
 
 const router = express.Router();
 
-router.post("/check-fraud", sendToFastAPI);
+router.post("/cal", sendToFastAPI);
 
 export default router;
