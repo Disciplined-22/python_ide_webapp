@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
 console.log("Registering routes...");
 app.use("/api/data", dataRoutes);
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 300;
 app.listen(PORT, () => {
     console.log(`Express API running on http://localhost:${PORT}`);
 });
